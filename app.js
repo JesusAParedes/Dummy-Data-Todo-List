@@ -38,21 +38,29 @@ const logTodos = () => {
 }
 
 const populateTodos = () => {
-    // console.log('arrayOfTodos IN POPULATE:', arrayOfTodos)
-    // for (let i = 0; i < arrayOfTodos.length; i++) {
-    //     const todo = arrayOfTodos[i];
-    //     console.log('todo:', todo)
-    //     console.log('todo["title"]:', todo['title'])
-      
-    //   }
-      
+    console.log('arrayOfTodos IN POPULATE:', arrayOfTodos)
+    for (let i = 0; i < arrayOfTodos.length; i++) {
+        const todo = arrayOfTodos[i];
+        console.log('todo:', todo)
+        console.log('todo["title"]:', todo['title'])
 
-    olItem = document.getElementById("todo-list")
-    console.log('olItem', olItem)
-
+        let text = document.createTextNode(arrayOfTodos[i].title)
+    let olItem = document.getElementById("todo-list")
     let newListItem = document.createElement('LI')
+
+    newListItem.appendChild(text)
     
-    console.log('arrayOfTodos[0].title is ->', arrayOfTodos[0].title)
+
+    console.log('text ->', text)
+
+
+    olItem.appendChild(newListItem)
+
+    console.log('arrayOfTodos[i].title is ->', arrayOfTodos[i].title)
+      
+      }
+      
+    
 
 
 }
