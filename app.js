@@ -38,16 +38,16 @@ const logTodos = () => {
 }
 
 const populateTodos = () => {
-    console.log('arrayOfTodos IN POPULATE:', arrayOfTodos)
-    let olItem = document.getElementById("todo-list")
-    for (let i = 0; i < arrayOfTodos.length; i++) {
-        const todo = arrayOfTodos[i];
-        console.log('todo:', todo)
-        console.log('todo["title"]:', todo['title'])
-
+  console.log('arrayOfTodos IN POPULATE:', arrayOfTodos)
+  let olItem = document.getElementById("todo-list")
+  for (let i = 0; i < arrayOfTodos.length; i++) {
+    const todo = arrayOfTodos[i];
+    console.log('todo:', todo)
+    console.log('todo["title"]:', todo['title'])
+    
     let text = document.createTextNode(arrayOfTodos[i].title)
+    
     let newListItem = document.createElement('LI')
-
     newListItem.appendChild(text)
     
 
@@ -63,4 +63,24 @@ const populateTodos = () => {
     
 
 
+}
+
+const filterTodos = () => {
+  console.log('filterTodos')
+  
+  // clear elements on page
+  // let newList = olItem.
+  // get input element by id & // get input value
+  let newInput = document.getElementById('id-input').value
+  console.log('newInput', newInput)
+  
+ 
+  // filter through array of todos to find userId === input.value
+  const fTodo = arrayOfTodos.userId
+
+  // get ol parent element
+  // create list item
+  // create textNode and add filtered todo.title
+  // append textNode to list item
+  // append list item to parent element
 }
