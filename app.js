@@ -39,13 +39,13 @@ const logTodos = () => {
 
 const populateTodos = () => {
     console.log('arrayOfTodos IN POPULATE:', arrayOfTodos)
+    let olItem = document.getElementById("todo-list")
     for (let i = 0; i < arrayOfTodos.length; i++) {
         const todo = arrayOfTodos[i];
         console.log('todo:', todo)
         console.log('todo["title"]:', todo['title'])
 
-        let text = document.createTextNode(arrayOfTodos[i].title)
-    let olItem = document.getElementById("todo-list")
+    let text = document.createTextNode(arrayOfTodos[i].title)
     let newListItem = document.createElement('LI')
 
     newListItem.appendChild(text)
