@@ -70,6 +70,7 @@ const filterTodos = () => {
   
   // clear elements on page
   // let newList = olItem.
+   let newList = olItem
   // get input element by id & // get input value
   let newInput = document.getElementById('id-input').value
   console.log('newInput', newInput)
