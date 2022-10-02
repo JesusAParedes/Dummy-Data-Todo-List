@@ -50,19 +50,12 @@ const populateTodos = () => {
     let newListItem = document.createElement('LI')
     newListItem.appendChild(text)
     
-
     console.log('text ->', text)
-
 
     olItem.appendChild(newListItem)
 
-    console.log('arrayOfTodos[i].title is ->', arrayOfTodos[i].title)
-      
-      }
-      
-    
-
-
+    console.log('arrayOfTodos[i].title is ->', arrayOfTodos[i].title) 
+      }    
 }
 
 const filterTodos = () => {
@@ -70,18 +63,76 @@ const filterTodos = () => {
   
   // clear elements on page
   // let newList = olItem.
-   let newList = olItem
-  // get input element by id & // get input value
-  let newInput = document.getElementById('id-input').value
-  console.log('newInput', newInput)
-  
- 
+   let newList = document.getElementById("todo-list").innerHTML = ""
+  // get input element by id 
+  let input = document.getElementById('id-input')
+  //  get input value
+  let newInput = input.value
+    console.log('newInput', newInput)
+  let num1 = parseInt(newInput)
+  console.log('num1', parseInt(newInput))
   // filter through array of todos to find userId === input.value
-  const fTodo = arrayOfTodos.userId
+
+  const filteredArray = arrayOfTodos.filter((userId) => {
+    for (let i = 0; i < arrayOfTodos.length; i++) {
+      console.log('arrayofTodos[i]***', arrayOfTodos[i])
+      if (userId.value === num1) {
+        return userId;
+      }
+    }
+  }
+  )
+  console.log('they match', filteredArray)
+}
 
   // get ol parent element
   // create list item
   // create textNode and add filtered todo.title
   // append textNode to list item
   // append list item to parent element
-}
+
+  const filteredArrayList = () => {
+  for (let i = 0; i < filteredArray.length; i++) {
+    const todo = filteredArray[i];
+    console.log('todo:', filteredArray)
+    console.log('todo["title"]:', filteredArray['title'])
+  let olItem = document.getElementById("todo-list")
+    let text = document.createTextNode(filteredArray[i].title)
+    
+    let newListItem = document.createElement('LI')
+    newListItem.appendChild(text)
+    
+    console.log('text ->', text)
+
+    olItem.appendChild(newListItem)
+
+    console.log('filteredArray[i].title is ->', filteredArray[i].title)
+  }}
+
+
+    // My other attempts at the filter method //
+
+            //   if (userId.value === num1) {
+  //   return filteredArray } 
+  //   else return false
+  // })
+  // console.log('filteredArray', filteredArray)
+
+
+
+  // const filteredArray = arrayOfTodos.filter((userId) => {
+  //   for (let i = 0; i < arrayOfTodos.length; i++) {
+  //     console.log('arrayofTodos[i]***', arrayOfTodos[i])
+  //     if (userId === num1) {
+  //       fTodo.push(arrayOfTodos)
+  //       console.log('they match')
+  //     }
+  //   }
+  // })
+  // console.log('fTodo ->', fTodo)
+  //   }
+//     // (userId === num1) {
+//     //   return fTodo
+//     // } else return false
+    
+//   })
