@@ -76,8 +76,9 @@ const filterTodos = () => {
   const filteredArray = arrayOfTodos.filter((userId) => {
     for (let i = 0; i < arrayOfTodos.length; i++) {
       console.log('arrayofTodos[i]***', arrayOfTodos[i])
-      if (userId.value === num1) {
-        return userId;
+      if (userId === num1) {
+        console.log('do they match')
+        return filteredArray;
       }
     }
   }
