@@ -80,8 +80,8 @@ const filterTodos = () => {
   
   const fx = todo.filter((filter) => {
       // const filter = todo[i].userId
-      console.log('arrayofTodos[i]***', arrayOfTodos)
-      if (filter === num1) {
+      console.log('arrayofTodos[i]***', filter)
+      if (filter.userId === num1) {
         console.log('do they match')
         return filter;
       }
