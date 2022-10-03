@@ -60,23 +60,28 @@ const populateTodos = () => {
 
 const filterTodos = () => {
   console.log('filterTodos')
-  
+  console.log('arrayofTodos', arrayOfTodos)
   // clear elements on page
+  let clear = document.getElementById("todo-list").innerHTML = ""
   // let newList = olItem.
-   let newList = document.getElementById("todo-list").innerHTML = ""
   // get input element by id 
   let input = document.getElementById('id-input')
   //  get input value
   let newInput = input.value
     console.log('newInput', newInput)
   let num1 = parseInt(newInput)
+  
   console.log('num1', parseInt(newInput))
   // filter through array of todos to find userId === input.value
 
-  const filteredArray = arrayOfTodos.filter((userId) => {
-    for (let i = 0; i < arrayOfTodos.length; i++) {
+    const todo = arrayOfTodos
+    console.log('userId', todo['userId'])
+    console.log('todo.userId === num1', todo.userId === num1)
+
+  const filteredArray = todo.filter((userId) => {
+    for (let i = 0; i < userId.length; i++) {
       console.log('arrayofTodos[i]***', arrayOfTodos[i])
-      if (userId === num1) {
+      if (todo.userId === num1) {
         console.log('do they match')
         return filteredArray;
       }
