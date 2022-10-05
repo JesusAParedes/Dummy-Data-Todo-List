@@ -88,7 +88,7 @@ const filterTodos = () => {
   }
   )
   console.log('they match', fx)
-}
+
 
   // get ol parent element
   // create list item
@@ -96,24 +96,26 @@ const filterTodos = () => {
   // append textNode to list item
   // append list item to parent element
 
-  const filteredArrayList = () => {
-  for (let i = 0; i < filter.length; i++) {
-    const todo = filter[i];
-    console.log('todo:', filter)
-    console.log('todo["title"]:', filter['title'])
-  let olItem = document.getElementById("todo-list")
-    let text = document.createTextNode(filter[i].title)
+  
+  for (let i = 0; i < fx.length; i++) {
+    const todo = arrayOfTodos[i]; 
+
+  let olerItem = document.getElementById("todo-list")
+
+    let text = document.createTextNode(fx[i].title)
     
-    let newListItem = document.createElement('LI')
-    newListItem.appendChild(text)
+
+    
+    let newerListItem = document.createElement('LI')
+    newerListItem.appendChild(text)
     
     console.log('text ->', text)
 
-    olItem.appendChild(newListItem)
+    olerItem.appendChild(newerListItem)
 
-    console.log('filter[i].title is ->', filter[i].title)
-  }}
-
+    console.log('fx.title is ->', fx[i].title)
+  
+} }
 
     // My other attempts at the filter method //
 
