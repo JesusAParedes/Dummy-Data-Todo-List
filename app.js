@@ -142,3 +142,8 @@ const filterTodos = () => {
 //     // } else return false
     
 //   })
+
+
+const removeTodos = () => {}
+
+const completeTodos = () => {}
