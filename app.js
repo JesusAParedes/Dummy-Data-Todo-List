@@ -98,7 +98,6 @@ const filterTodos = () => {
 
   
   for (let i = 0; i < fx.length; i++) {
-    const todo = arrayOfTodos[i]; 
 
   let olerItem = document.getElementById("todo-list")
 
